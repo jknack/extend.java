@@ -6,7 +6,8 @@ Extends a JavaBean instance at runtime (or convert them to ```Map```).
 usage
 ======
 
-** Extends a JavaBean**
+**Extends a JavaBean**
+
 ```java
 import static com.github.jknack.extend.Extend.*;
 
@@ -20,7 +21,7 @@ MyObject extended =
   );
 ```
 
-** Derived Properties**
+**Derived Properties**
 
 ```java
 import static com.github.jknack.extend.Extend.*;
@@ -37,7 +38,7 @@ MyObject extended =
   );
 ```
 
-** Convert a JavaBean to a Map**
+**Convert a JavaBean to a Map**
 
 ```java
 import static com.github.jknack.extend.Extend.*;
@@ -68,14 +69,6 @@ dependencies
 help and support
 ======
  [Bugs, Issues and Features](https://github.com/jknack/amd4j/issues)
-
-related projects
-======
- [r.js](http://requirejs.org/docs/optimization.html)
-
-credits
-======
- [@jrburke](https://github.com/jrburke)
 
 author
 ======
