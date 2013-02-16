@@ -1,7 +1,7 @@
 extend.java
 ======
 
-Extends a JavaBean instance at runtime (or convert them to ```Map```).
+Inspired by JavaScript, extend.java is a small library for augmenting a JavaBean instance at runtime.
 
 usage
 ======
@@ -57,6 +57,7 @@ why?
 ======
  * It removes some odd practices/techniques like [DTO](http://en.wikipedia.org/wiki/Data_transfer_object) creation or similar patterns.
  * If you expose Domain Object from an API you can easily augment the response per use case, security rules, etc.
+ * Beside you can't access to dynamically created properties: MVC Frameworks, Template Engines, Serializers can!! because they use reflection.
 
 dependencies
 ======
