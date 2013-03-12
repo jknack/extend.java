@@ -4,7 +4,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.github.jknack</groupId>
   <artifactId>extend.java</artifactId>
-  <version>0.1.0</version>
+  <version>0.1.1-SNAPSHOT</version>
   <packaging>jar</packaging>
 
   <description>Extends Java Objects at runtime</description>
@@ -33,7 +33,7 @@
     <developerConnection>scm:git:git@github.com:jknack/extend.java.git
     </developerConnection>
     <url>scm:git:git@github.com:jknack/extend.java.git</url>
-    <tag>v0.1.0</tag>
+    <tag>HEAD</tag>
   </scm>
 
   <distributionManagement>
