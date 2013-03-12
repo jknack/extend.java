@@ -61,6 +61,23 @@ why?
  * If you expose Domain Object from an API you can easily augment the response per use case, security rules, etc.
  * Beside you can't access to dynamically created properties: MVC Frameworks, Template Engines, Serializers can!! because they use reflection.
 
+maven
+======
+Stable version: **0.1.0**
+
+
+```xml
+  <dependency>
+    <groupId>com.github.jknack</groupId>
+    <artifactId>extend.java</artifactId>
+    <version>${extend.java-version}</version>
+  </dependency>
+```
+ 
+Development version: **0.2.0-SNAPSHOT**
+
+SNAPSHOT versions are NOT synchronized to Central. If you want to use a snapshot version you need to add the https://oss.sonatype.org/content/repositories/snapshots/ repository to your pom.xml.
+
 dependencies
 ======
 
