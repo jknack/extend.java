@@ -57,13 +57,14 @@ Generated objects (beans and maps) are **immutable**, so they can't be modified 
 
 why?
 ======
- * It removes some odd practices/techniques like [DTO](http://en.wikipedia.org/wiki/Data_transfer_object) creation or similar patterns.
+ * It removes some verbose practices/techniques like [DTO](http://en.wikipedia.org/wiki/Data_transfer_object) creation or similar patterns.
+ * Help you to apply patterns and techniques like [DTO](http://en.wikipedia.org/wiki/Data_transfer_object), [PresentationModel](http://martinfowler.com/eaaDev/PresentationModel.html) without frustration.
  * If you expose Domain Object from an API you can easily augment the response per use case, security rules, etc.
  * Beside you can't access to dynamically created properties: MVC Frameworks, Template Engines, Serializers can!! because they use reflection.
 
 maven
 ======
-Stable version: **0.1.0**
+Stable version: **0.1.1**
 
 
 ```xml
@@ -74,7 +75,7 @@ Stable version: **0.1.0**
   </dependency>
 ```
  
-Development version: **0.2.0-SNAPSHOT**
+Development version: **0.1.2-SNAPSHOT**
 
 SNAPSHOT versions are NOT synchronized to Central. If you want to use a snapshot version you need to add the https://oss.sonatype.org/content/repositories/snapshots/ repository to your pom.xml.
 
