@@ -18,6 +18,8 @@ public class BeanExtendTest {
   public static class Person {
     private String name;
 
+    private boolean fun = true;
+
     public Person(final String name) {
       this.name = name;
     }
@@ -32,15 +34,25 @@ public class BeanExtendTest {
     public void setName(final String name) {
       this.name = name;
     }
+
+    public boolean isFun() {
+      return fun;
+    }
+
+    public void setFun(final boolean fun) {
+      this.fun = fun;
+    }
   }
 
   @Test
   public void bean() throws Exception {
     Person moe =
         extend(new Person("moe"),
-            $("age", 50)
+            $("age", 50),
+            $("fun", false)
         );
     assertEquals("moe", moe.getName());
+    assertEquals(false, moe.isFun());
     assertEquals(50, get("getAge", moe));
   }
 
@@ -52,9 +64,11 @@ public class BeanExtendTest {
         );
     // the next two calls should be ignored.
     moe.setName("curly");
+    moe.setFun(false);
     set("setAge", moe, 45);
     // no change should be made.
     assertEquals("moe", moe.getName());
+    assertEquals(true, moe.isFun());
     assertEquals(50, get("getAge", moe));
   }
 

@@ -178,15 +178,17 @@ public final class Extend {
       return new Callable<Object>() {
         @Override
         public Object call() throws Exception {
-          String prefix = "get";
-          if (methodName.startsWith(prefix)) {
-            StringBuilder buffer = new StringBuilder(methodName.substring(prefix.length()));
-            buffer.setCharAt(0, Character.toLowerCase(buffer.charAt(0)));
-            String propertyName = buffer.toString();
-            if (properties.containsKey(propertyName)) {
-              return properties.get(propertyName);
+          String[] prefixes = {"get", "is" };
+          for (String prefix : prefixes) {
+            if (methodName.startsWith(prefix)) {
+              StringBuilder buffer = new StringBuilder(methodName.substring(prefix.length()));
+              buffer.setCharAt(0, Character.toLowerCase(buffer.charAt(0)));
+              String propertyName = buffer.toString();
+              if (properties.containsKey(propertyName)) {
+                return properties.get(propertyName);
+              }
+              return UNRESOLVED;
             }
-            return UNRESOLVED;
           }
           return UNRESOLVED;
         }
